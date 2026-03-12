@@ -1,0 +1,19 @@
+@page
+@model YourNamespace.Models.CertificateViewModel
+
+<!-- Your search page view structure goes here -->
+<h1>Search Certificates</h1>
+<form method="get">
+    <input type="text" name="searchTerm" placeholder="Enter search term..." />
+    <button type="submit">Search</button>
+</form>
+
+@if(Model.Certificates != null && Model.Certificates.Any()) {
+    <ul>
+        @foreach(var certificate in Model.Certificates) {
+            <li>@certificate.Name</li>
+        }
+    </ul>
+} else {
+    <p>No certificates found.</p>
+}
