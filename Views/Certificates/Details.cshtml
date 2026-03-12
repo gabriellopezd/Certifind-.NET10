@@ -1,0 +1,12 @@
+@model YourNamespace.Models.Certificate
+
+<h1>Certificate Details</h1>
+
+<div>
+    <h2>@Model.Title</h2>
+    <p>Issued To: @Model.IssuedTo</p>
+    <p>Issuer: @Model.Issuer</p>
+    <p>Issue Date: @Model.IssueDate.ToString("yyyy-MM-dd")</p>
+    <p>Expiration Date: @Model.ExpirationDate.ToString("yyyy-MM-dd")</p>
+    <p>Description: @Model.Description</p>
+</div>
